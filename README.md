@@ -241,17 +241,6 @@ See [SECURITY.md](./SECURITY.md) for detailed instructions on securing the appli
 
 ---
 
-## 🤝 Contributors
-
-- **[Lakshit Gupta](https://github.com/Lakshit-Gupta)** - Full Stack & ML Development
-- **[Athira Ravi Pillai]** - Data Science & Model Optimization
-- **[Krish Jain]** - Frontend Development
-- **[Jinia Goel]** - UX Design & Testing
-
-For any questions, feel free to [open an issue](https://github.com/Lakshit-Gupta/Sales_Prediction/issues).
-
----
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
