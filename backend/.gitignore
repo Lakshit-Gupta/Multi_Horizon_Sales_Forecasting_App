@@ -1,0 +1,42 @@
+# Ignore sensitive files
+firebase-key.json
+tft_model_cpu.onnx
+tft_model_cpu_state_dict.pt
+tft_traced_model_cpu_wsl.pt
+tft_traced_model.pt
+
+# Ignore Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore logs
+*.log
+
+# Ignore uploaded files
+uploads/

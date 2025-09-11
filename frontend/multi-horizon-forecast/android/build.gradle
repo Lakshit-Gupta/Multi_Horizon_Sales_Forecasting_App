@@ -1,0 +1,52 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+  repositories {
+    google()
+    mavenCentral()
+  }
+  dependencies {
+    classpath('com.android.tools.build:gradle')
+    classpath('com.facebook.react:react-native-gradle-plugin')
+    classpath('org.jetbrains.kotlin:kotlin-gradle-plugin')
+  }
+}
+// Define versions in a single place
+ext {
+    // SDK and tools
+    minSdkVersion = 24
+    targetSdkVersion = 34
+    compileSdkVersion = 35
+    buildToolsVersion = "35.0.0"
+    
+    // NDK version for React Native
+    ndkVersion = "26.1.10909125"
+}
+
+def reactNativeAndroidDir = new File(
+  providers.exec {
+    workingDir(rootDir)
+    commandLine("node", "--print", "require.resolve('react-native/package.json')")
+  }.standardOutput.asText.get().trim(),
+  "../android"
+)
+
+allprojects {
+  repositories {
+    maven {
+      // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
+      url(reactNativeAndroidDir)
+    }
+
+    google()
+    mavenCentral()
+    maven { url = uri('https://www.jitpack.io') }
+    maven { url = uri('https://maven.google.com') }
+    maven { url = uri('https://plugins.gradle.org/m2/') }
+    // JCenter is deprecated but still used by some dependencies
+    jcenter()
+  }
+}
+
+apply plugin: "expo-root-project"
+apply plugin: "com.facebook.react.rootproject"

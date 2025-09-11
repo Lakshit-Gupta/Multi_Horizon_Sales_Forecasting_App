@@ -3,13 +3,13 @@ import { getAuth } from 'firebase/auth';
 
 // Firebase Config
 const firebaseConfig = {
-  apiKey: "AIzaSyCDDGIoPswqFPhMATT0kC710KgoV5yjit8",
-  authDomain: "multihorizonforecast.firebaseapp.com",
-  projectId: "multihorizonforecast",
-  storageBucket: "multihorizonforecast.firebasestorage.app",
-  messagingSenderId: "700644976114",
-  appId: "1:700644976114:web:fcca14b3ac208cccdf776b",
-  measurementId: "G-Q9L976K2VG"
+  apiKey: "ENTER_YOUR_API_KEY",
+  authDomain: "ENTER_YOUR_AUTH_DOMAIN",
+  projectId: "ENTER_YOUR_PROJECT_ID",
+  storageBucket: "ENTER_YOUR_STORAGE_BUCKET",
+  messagingSenderId: "ENTER_YOUR_MESSAGING_SENDER_ID",
+  appId: "ENTER_YOUR_APP_ID",
+  measurementId: "ENTER_YOUR_MEASUREMENT_ID"
 };
 
 // Initialize Firebase

@@ -1,0 +1,19 @@
+# API and web server
+fastapi==0.112.2
+uvicorn==0.35.0
+
+# Authentication and cloud
+firebase-admin==6.2.0
+google-auth==2.23.0
+google-auth-oauthlib==1.1.0
+python-multipart==0.0.20
+
+# Data processing
+pandas==2.0.3
+numpy==1.24.4
+openpyxl==3.1.5
+pydantic==2.11.7
+xlsxwriter==3.1.2
+
+# ML inference - use compatible version with Python 3.10
+onnxruntime==1.17.0

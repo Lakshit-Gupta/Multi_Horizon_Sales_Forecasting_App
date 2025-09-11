@@ -1,0 +1,25 @@
+{
+  "cli": {
+    "version": ">= 16.17.4",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "developmentClient": false,
+      "channel": "preview"
+    },
+    "production": {
+      "autoIncrement": true,
+      "developmentClient": false,
+      "channel": "production"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

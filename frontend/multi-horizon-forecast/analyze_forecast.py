@@ -41,7 +41,7 @@ try:
     data = response.json()
     if "prediction" in data:
         preds = data["prediction"][0]
-        print("✅ Success:")
+        print("Success:")
         for i, val in enumerate(preds):
             print(f"Day {i+1}: {round(val, 2)}")
 
@@ -54,7 +54,7 @@ try:
         plt.grid(True)
         plt.show()
     else:
-        print("❌ Error:")
+        print(" Error:")
         print(data)
 except Exception as e:
-    print("❌ Failed to parse response:", e)
+    print(" Failed to parse response:", e)

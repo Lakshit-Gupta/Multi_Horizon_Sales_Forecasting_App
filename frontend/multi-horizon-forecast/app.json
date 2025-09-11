@@ -1,29 +1,42 @@
 {
   "expo": {
-    "name": "MultiHorizonForecast",
-    "slug": "multi-horizon-forecast-new",
-    "scheme": "multihorizonforecast",
+    "name": "multi-horizon-forecast",
+    "slug": "ENTER_YOUR_EXPO_SLUG",
+    "scheme": "ENTER_YOUR_APP_SCHEME",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
+      "package": "com.yourusername.yourappname",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#050A30"
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "extra": {
+      "eas": {
+        "projectId": "ENTER_YOUR_EAS_PROJECT_ID"
+      }
+    },
+    "updates": {
+      "enabled": false,
+      "url": "https://u.expo.dev/ENTER_YOUR_EAS_PROJECT_ID"
+    },
+    "runtimeVersion": "1.0.0",
+    "owner": "ENTER_YOUR_EXPO_USERNAME"
   }
 }

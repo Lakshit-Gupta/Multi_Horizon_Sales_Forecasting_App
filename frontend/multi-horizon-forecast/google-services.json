@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "ENTER_YOUR_PROJECT_NUMBER",
+    "project_id": "ENTER_YOUR_PROJECT_ID",
+    "storage_bucket": "ENTER_YOUR_STORAGE_BUCKET"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "ENTER_YOUR_MOBILESDK_APP_ID",
+        "android_client_info": {
+          "package_name": "com.yourusername.yourappname"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "ENTER_YOUR_ANDROID_CLIENT_ID.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yourusername.yourappname",
+            "certificate_hash": "ENTER_YOUR_CERTIFICATE_HASH"
+          }
+        },
+        {
+          "client_id": "ENTER_YOUR_WEB_CLIENT_ID.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "ENTER_YOUR_API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "ENTER_YOUR_WEB_CLIENT_ID.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

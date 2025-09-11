@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Alert } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import Animated, { useSharedValue, useAnimatedStyle, withTiming, Easing } from 'react-native-reanimated';
 import type { StackNavigationProp } from '@react-navigation/stack';
 import TemplateScreen from './TemplateScreen';
+import { logoutUser } from '../services/auth';
 
 type RootStackParamList = {
   HomeScreen: undefined;
   TemplateScreen: undefined;
-  ForecastScreen: undefined;
+  EnterDetailsScreen: undefined;
+  ForecastScreen: { itemName?: string; storeName?: string };
   InsightsScreen: undefined;
+  SavedForecastsScreen: undefined;
 };
 
 type NavigationProp = StackNavigationProp<RootStackParamList>;
@@ -54,6 +57,15 @@ const HomeScreen: React.FC = () => {
     }))
   );
 
+  const handleLogout = async () => {
+    try {
+      await logoutUser();
+      // No need to navigate - the auth state listener will handle this
+    } catch (error) {
+      Alert.alert('Logout Failed', 'Failed to log out. Please try again.');
+    }
+  };
+
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -73,32 +85,24 @@ const HomeScreen: React.FC = () => {
               colors={['#0B666A', '#97FEED22']}
               style={styles.buttonGradient}
             >
-              <Text style={styles.buttonText}>Data Template</Text>
+              <Text style={styles.buttonText}>Upload Data</Text>
             </LinearGradient>
           </TouchableOpacity>
           <TouchableOpacity
             style={[styles.button, styles.buttonShadow]}
-            onPress={() => navigation.navigate('ForecastScreen')}
+            onPress={() => navigation.navigate('SavedForecastsScreen')}
           >
             <LinearGradient
               colors={['#0B666A', '#97FEED22']}
               style={styles.buttonGradient}
             >
-              <Text style={styles.buttonText}>Forecasting</Text>
-            </LinearGradient>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.button, styles.buttonShadow]}
-            onPress={() => navigation.navigate('InsightsScreen')}
-          >
-            <LinearGradient
-              colors={['#0B666A', '#97FEED22']}
-              style={styles.buttonGradient}
-            >
-              <Text style={styles.buttonText}>Insights</Text>
+              <Text style={styles.buttonText}>Saved Forecasts</Text>
             </LinearGradient>
           </TouchableOpacity>
         </View>
+        <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
+          <Text style={styles.logoutText}>Logout</Text>
+        </TouchableOpacity>
       </LinearGradient>
     </View>
   );
@@ -164,6 +168,20 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.8,
     shadowRadius: 5,
+  },
+  logoutButton: {
+    marginTop: 20,
+    padding: 10,
+    borderRadius: 8,
+    backgroundColor: '#0B666A',
+    width: '80%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  logoutText: {
+    color: '#97FEED',
+    fontSize: 18,
+    fontWeight: '600',
   },
 });
 
