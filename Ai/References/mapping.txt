@@ -1,0 +1,8 @@
+1. https://www.kaggle.com/code/konstantinboyko/forecasting-with-the-temporal-fusion-transformer
+2.https://www.kaggle.com/code/shreyasajal/pytorch-forecasting-for-time-series-forecasting
+3.https://www.kaggle.com/code/abdulravoofshaik/private-lb-top-2-google-s-tft
+4.https://www.kaggle.com/code/kirichenko17roman/dl-lab-24-deep-learning-approaches-for-ts
+5.https://www.kaggle.com/code/maichibao/multitargets-tft-pytorch-forecasting-sample
+6.https://www.kaggle.com/code/komalnalawade/temporal-fusion-transformer-for-forecast-darts
+7.https://www.kaggle.com/code/frodobaggins87/forecasting-sticker-sales
+8.https://www.kaggle.com/code/whitedevil8861/time-series-transformer
