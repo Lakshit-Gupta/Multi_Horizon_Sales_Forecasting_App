@@ -6,6 +6,9 @@ This comprehensive platform utilizes the **Temporal Fusion Transformer (TFT)** m
 ![TFT Model](https://img.shields.io/badge/Model-Temporal%20Fusion%20Transformer-orange)
 ![Mobile](https://img.shields.io/badge/Platform-Mobile%20%26%20Web-green)
 
+## 🎥 Demo
+▶️ Watch the working demo here:
+[Watch Demo on YouTube](https://youtu.be/cH2adRGGpeM)
 ## 🏗️ Project Structure
 
 The project consists of three main components:
