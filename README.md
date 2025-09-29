@@ -8,7 +8,7 @@ This comprehensive platform utilizes the **Temporal Fusion Transformer (TFT)** m
 
 ## 🎥 Demo
 ▶️ Watch the working demo here:
-[Watch Demo on YouTube](https://youtu.be/cH2adRGGpeM)
+[Watch Demo on YouTube](https://youtu.be/_eZbY4RQjVg)
 ## 🏗️ Project Structure
 
 The project consists of three main components:
